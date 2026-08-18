@@ -1,8 +1,8 @@
 locals {
-  environment    = "sandbox"
-  aws_account_id = "004326122988"
-  aws_region     = "eu-central-1"
-  cluster_name   = "kubeverse-prod"
+  environment    = var.environment
+  aws_account_id = var.aws_account_id
+  aws_region     = var.aws_region
+  cluster_name   = var.cluster_name
 
   common_tags = {
     Environment = local.environment

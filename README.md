@@ -12,7 +12,7 @@ Infrastructure-as-Code repository for EKS cluster provisioning and Argo CD insta
 
 ## Prerequisites
 
-- AWS Account: sandbox-vfde-bss-deployment (004326122988) with FullAdmin role
+- AWS Account with FullAdmin role (configure via AWS SSO or named profiles)
 - CLI tools: `tofu`, `terragrunt`, `kubectl`, `helm`, `aws` (all must be in PATH)
 - AWS credentials configured with proper account access
 - S3 bucket and DynamoDB table for Terraform state (auto-created or pre-provisioned)
@@ -29,9 +29,9 @@ cd kubeverse-infra
 ### 2. Authenticate to AWS
 
 ```bash
-aws sso login --profile sandbox-fulladmin  # or your auth method
-export AWS_PROFILE=sandbox-fulladmin
-aws sts get-caller-identity  # Verify Account: 004326122988
+aws sso login --profile <YOUR_PROFILE>  # or your auth method
+export AWS_PROFILE=<YOUR_PROFILE>
+aws sts get-caller-identity  # Verify credentials are active
 ```
 
 ### 3. Dry-run (Plan)

@@ -2,9 +2,10 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-LIVE_DIR="${ROOT_DIR}/live/sandbox/eu-central-1"
-CLUSTER_NAME="kubeverse-prod"
-REGION="eu-central-1"
+# Set these via environment variables or .env file
+LIVE_DIR="${LIVE_DIR:-${ROOT_DIR}/live/sandbox/$(aws configure get region --output text)}"
+CLUSTER_NAME="${CLUSTER_NAME:-kubeverse-prod}"
+REGION="${REGION:-$(aws configure get region --output text)}"
 
 cd "${LIVE_DIR}/eks"
 echo "=== Initializing EKS stack ==="

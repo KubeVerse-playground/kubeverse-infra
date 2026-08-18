@@ -8,3 +8,4 @@ crash.log
 *.tfvars.json
 *.pem
 .DS_Store
+.env
