@@ -1,4 +1,4 @@
-# KubeVerse-infra
+# kubeverse-infra
 
 Infrastructure-as-Code repository for EKS cluster provisioning and Argo CD installation using Terragrunt + OpenTofu.
 
@@ -22,8 +22,8 @@ Infrastructure-as-Code repository for EKS cluster provisioning and Argo CD insta
 ### 1. Clone this repo
 
 ```bash
-git clone https://github.com/your-org/KubeVerse-infra.git
-cd KubeVerse-infra
+git clone https://github.com/KubeVerse-playground/kubeverse-infra.git
+cd kubeverse-infra
 ```
 
 ### 2. Authenticate to AWS
