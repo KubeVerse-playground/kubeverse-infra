@@ -1,0 +1,10 @@
+.terraform/
+.terragrunt-cache/
+.tofu/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+*.pem
+.DS_Store
